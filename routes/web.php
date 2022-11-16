@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@ use App\Http\Controllers\ActivityController;
 */
 
 Route::get('', [ActivityController::class, 'index'])->name('activity.index');
-Route::get('create/{task}', ['as' => 'activity.create', 'uses' => 'ActivityController@create']);
+Route::get('clone/{activity}', [ActivityController::class, 'create'])->name('activity.clone');
 
 Route::get('create', [ActivityController::class, 'create'])->name('activity.create');
 Route::post('create', [ActivityController::class, 'store'])->name('activity.store');

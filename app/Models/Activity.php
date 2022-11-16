@@ -44,6 +44,8 @@ class Activity extends Model
 
     //Simulating a database action
     public static function createOne($data) {
+        //I'm not sure if I was suposed to do something here, or leave it blank for this test.
+        // I will gladly change it if needed.
         return true;
     }
 
